@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 public class Main {
     public static double BAJO= 18.5;
     public static double MEDIO=25;
