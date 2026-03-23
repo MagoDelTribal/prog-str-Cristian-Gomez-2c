@@ -1,5 +1,7 @@
 package com.example.demo.repositories;
 
+import com.sun.jdi.StringReference;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -12,6 +14,7 @@ public class PersoneFileRepository {
 
     private final Path pathFile = Paths.get("data", "persons.csv");
 
+    //agregar validacion para crear
     private void ensureFile() throws IOException {
         if(Files.notExists(pathFile)){
             Files.createFile(pathFile);
@@ -28,5 +31,9 @@ public class PersoneFileRepository {
                 StandardCharsets.UTF_8, StandardOpenOption.APPEND);
     }
 
+
+    public void saveFile(List<String> Lines)throws IOException{
+        Files.write(pathFile,Lines,StandardCharsets.UTF_8,StandardOpenOption.TRUNCATE_EXISTING);
+    }
 }
 

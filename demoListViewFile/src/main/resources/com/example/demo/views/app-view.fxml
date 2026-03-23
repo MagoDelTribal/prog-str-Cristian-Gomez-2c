@@ -15,20 +15,26 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label fx:id="" text="Nombre:" />
+            <Label text="Nombre:" />
             <Label text="Email:" GridPane.rowIndex="1" />
             <TextField fx:id="txtname" GridPane.columnIndex="1" />
             <TextField fx:id="txtemail" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="txtedad" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="Edad:" GridPane.rowIndex="2" />
+            <Label text="Code:" GridPane.rowIndex="3" />
+            <TextField fx:id="txtcode" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
          </children>
       </GridPane>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
             <Button mnemonicParsing="false" onAction="#onReload" text="Recargar info" />
             <Button mnemonicParsing="false" onAction="#onAddPerson" text="Agregar" />
+            <Button mnemonicParsing="false" onAction="#onUpdate" text="Actualizar" />
+            <Button mnemonicParsing="false" text="Borrar" onAction="#onDelete" />
          </children>
       </HBox>
       <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" />
