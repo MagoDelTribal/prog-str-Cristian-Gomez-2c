@@ -14,7 +14,6 @@ public class PersoneFileRepository {
 
     private final Path pathFile = Paths.get("data", "persons.csv");
 
-    //agregar validacion para crear
     private void ensureFile() throws IOException {
         if(Files.notExists(pathFile)){
             Files.createFile(pathFile);

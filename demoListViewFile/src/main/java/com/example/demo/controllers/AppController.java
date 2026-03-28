@@ -87,7 +87,6 @@ public class AppController {
         try {
             int index = listView.getSelectionModel().getSelectedIndex();
 
-            // CORRECCIÓN 2: Validar que haya algo seleccionado
             if (index >= 0) {
                 String name = txtname.getText();
                 String email = txtemail.getText();
